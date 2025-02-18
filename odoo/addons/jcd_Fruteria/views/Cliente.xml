@@ -1,0 +1,41 @@
+<odoo>
+  <data>
+    <record id="jcd_Fruteria.Cliente_tree" model="ir.ui.view">
+      <field name="name">jcd_Fruteria.Cliente.tree</field>
+      <field name="model">jcd_Fruteria.Cliente</field>
+      <field name="arch" type="xml">
+        <tree string="Cliente">
+          <field name="name"></field>
+          <field name="email"/>
+          <field name="nacionalidad_id"/>
+        </tree>
+      </field>
+    </record>
+    <record id="jcd_Fruteria.cliente_form" model="ir.ui.view">
+      <field name="name">jcd_Fruteria.cliente.form</field>
+      <field name="model">jcd_Fruteria.cliente</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="name"></field>
+              <field name="fecha_nacimiento"/>
+              <field name="nacionalidad_id"/>
+              <!-- Como alternativa a hacer un tree anidado, podemos definir un kanban -->
+              <field name="Fruta_ids" widget="many2many_kanban">
+                <kanban>
+                    <field name="name"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <field name="name"/>
+                        </t>
+                    </templates>
+                </kanban>
+              </field>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+  </data>
+</odoo>

@@ -1,19 +1,19 @@
 <odoo>
     <data>  
           <record id="object0" model="jcd_Fruteria.jcd_Fruteria">
-            <field name="name">Object 0</field>
+            <field name="name">Manzana</field>
             <field name="value">0</field>
           </record>
           <record id="object1" model="jcd_Fruteria.jcd_Fruteria">
-            <field name="name">Object 1</field>
+            <field name="name">Pera</field>
             <field name="value">10</field>
           </record>
           <record id="object2" model="jcd_Fruteria.jcd_Fruteria">
-            <field name="name">Object 2</field>
+            <field name="name">Fresa</field>
             <field name="value">20</field>
           </record>
           <record id="object3" model="jcd_Fruteria.jcd_Fruteria">
-            <field name="name">Object 3</field>
+            <field name="name">Platano</field>
             <field name="value">30</field>
           </record>
 <!--

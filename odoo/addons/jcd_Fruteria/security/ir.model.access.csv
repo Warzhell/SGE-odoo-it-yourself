@@ -1,2 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_sge_libreria_sge_libreria,sge_libreria.sge_libreria,model_sge_libreria_sge_libreria,base.group_user,1,1,1,1
+access_jcd_Fruteria_Fruta_users,jcd_Fruteria.Fruta_users,model_jcd_Fruteria_Fruta,base.group_user,1,0,0,0
+access_jcd_Fruteria_Cliente_users,jcd_Fruteria.Cliente_users,model_jcd_Fruteria_Cliente,base.group_user,1,0,0,0
+access_jcd_Fruteria_Empleado_users,jcd_Fruteria.Empleado_users,model_jcd_Fruteria_Empleado,base.group_user,1,0,0,0
+access_jcd_Fruteria_Proveedor_users,jcd_Fruteria.Proveedor_users,model_jcd_Fruteria_Proveedor,base.group_user,1,0,0,0
+access_jcd_Fruteria_Fruta_system,jcd_Fruteria.Fruta_system,model_jcd_Fruteria_Fruta,base.group_system,1,1,1,1
+access_jcd_Fruteria_Cliente_system,jcd_Fruteria.Cliente_system,model_jcd_Fruteria_Cliente,base.group_system,1,1,1,1
+access_jcd_Fruteria_Empleado_system,jcd_Fruteria.Empleado_system,model_jcd_Fruteria_Empleado,base.group_system,1,1,1,1
+access_jcd_Fruteria_Proveedor_system,jcd_Fruteria.Proveedor_system,model_jcd_Fruteria_Proveedor,base.group_system,1,1,1,1

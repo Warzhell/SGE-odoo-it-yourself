@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Librería",
+    'name': "Fruteria",
 
     'summary': "Módulo de ejemplo de Sistemas de Gestión Empresarial",
 
@@ -26,7 +26,7 @@ viene dado por el nombre del directorio cuando lo creamos con odoo scaffold
 
     # always loaded
     'data': [
-        #'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/menu.xml',
         'views/Cliente.xml',
         'views/Fruta.xml',

@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from . import Cliente,Empleado,Fruta,Proveedor
+from . import Fruta
+from . import Cliente
+from . import Empleado
+from . import Proveedor
 

@@ -18,7 +18,7 @@
         <menuitem
             id="jcd_Fruteria.categoria_menu"
             name="Categoria"
-            action="jcd_futeria.categoria_action"
+            action="jcd_Fruteria.categoria_action"
             parent="jcd_Fruteria.root_menu"
             sequence="10"/>
 

@@ -38,6 +38,5 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <!-- Menú para acceder a la vista de Empleado -->
-    <menuitem id="menu_jcd_fruteria_empleado" name="Empleados" action="action_jcd_fruteria_empleado" sequence="20"/>
+    
 </odoo>

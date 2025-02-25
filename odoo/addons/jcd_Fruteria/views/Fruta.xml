@@ -40,6 +40,5 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <!-- Menú para acceder a la vista de Fruta -->
-    <menuitem id="menu_jcd_fruteria_fruta" name="Frutas" action="action_jcd_fruteria_fruta" sequence="30"/>
+    
 </odoo>

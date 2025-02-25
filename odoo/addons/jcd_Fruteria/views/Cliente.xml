@@ -36,6 +36,5 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <!-- Menú para acceder a la vista de Cliente -->
-    <menuitem id="menu_jcd_fruteria_cliente" name="Clientes" action="action_jcd_fruteria_cliente" sequence="10"/>
+    
 </odoo>

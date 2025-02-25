@@ -36,6 +36,5 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <!-- Menú para acceder a la vista de Proveedor -->
-    <menuitem id="menu_jcd_fruteria_proveedor" name="Proveedores" action="action_jcd_fruteria_proveedor" sequence="40"/>
+    
 </odoo>

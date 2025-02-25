@@ -1,40 +1,41 @@
 <odoo>
-  <data>
-    <record id="jcd_Fruteria.Proveedor_tree" model="ir.ui.view">
-      <field name="name">jcd_Fruteria.Proveedor.tree</field>
-      <field name="model">jcd_Fruteria.Proveedor</field>
-      <field name="arch" type="xml">
-        <tree string="Cliente">
-          <field name="name"></field>
-          <field name="email"/>
-          <field name="fruta_id"/>
-        </tree>
-      </field>
+    <!-- Vista de lista para Proveedor -->
+    <record id="jcd_fruteria_proveedor_tree" model="ir.ui.view">
+        <field name="name">jcd_fruteria.proveedor.tree</field>
+        <field name="model">jcd_fruteria.proveedor</field>
+        <field name="arch" type="xml">
+            <tree string="Proveedores">
+                <field name="name"/>
+                <field name="email"/>
+                <field name="fruta_id"/>
+            </tree>
+        </field>
     </record>
-    <record id="jcd_Fruteria.Proveedor_form" model="ir.ui.view">
-      <field name="name">jcd_Fruteria.Proveedor.form</field>
-      <field name="model">jcd_Fruteria.Proveedor</field>
-      <field name="arch" type="xml">
-        <form string="">
-          <sheet>
-            <group>
-              <field name="name"></field>
-              <field name="email"/>             
-              <!-- Como alternativa a hacer un tree anidado, podemos definir un kanban -->
-              <field name="fruta_id" widget="many2many_kanban">
-                <kanban>
-                    <field name="name"/>
-                    <templates>
-                        <t t-name="kanban-box">
-                            <field name="name"/>
-                        </t>
-                    </templates>
-                </kanban>
-              </field>
-            </group>
-          </sheet>
-        </form>
-      </field>
+
+    <!-- Vista de formulario para Proveedor -->
+    <record id="jcd_fruteria_proveedor_form" model="ir.ui.view">
+        <field name="name">jcd_fruteria.proveedor.form</field>
+        <field name="model">jcd_fruteria.proveedor</field>
+        <field name="arch" type="xml">
+            <form string="Proveedor">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="email"/>
+                        <field name="fruta_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
     </record>
-  </data>
+
+    <!-- Acción para abrir la vista de Proveedor -->
+    <record id="action_jcd_fruteria_proveedor" model="ir.actions.act_window">
+        <field name="name">Proveedores</field>
+        <field name="res_model">jcd_fruteria.proveedor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menú para acceder a la vista de Proveedor -->
+    <menuitem id="menu_jcd_fruteria_proveedor" name="Proveedores" action="action_jcd_fruteria_proveedor" sequence="40"/>
 </odoo>

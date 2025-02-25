@@ -1,50 +1,45 @@
 <odoo>
-  <data>
-    <record id="jcd_Fruteria.Fruta_tree" model="ir.ui.view">
-      <field name="name">jcd_Fruteria.Fruta.tree</field>
-      <field name="model">jcd_Fruteria.Fruta</field>
-      <field name="arch" type="xml">
-        <tree string="Fruta">
-          <field name="name"></field>
-          <!-- Podemos ver precio y moneda en una única columna -->
-          <field name="precio" widget='monetary' options="{'currency_field': 'currency_id'}"/>
-          <field name="cantidad"/>
-          <!-- Los campos relacionales, como categoria_id, se pueden usar como cualquier otro en vistas.
-          Odoo nos mostrará el atributo name del objeto relacionado. -->
-          <field name="estado"/>
-          <!--<field name="categoria_id" />-->
-        </tree>
-      </field>
+    <!-- Vista de lista para Fruta -->
+    <record id="jcd_fruteria_fruta_tree" model="ir.ui.view">
+        <field name="name">jcd_fruteria.fruta.tree</field>
+        <field name="model">jcd_fruteria.fruta</field>
+        <field name="arch" type="xml">
+            <tree string="Frutas">
+                <field name="fruta_id"/>
+                <field name="name"/>
+                <field name="precio"/>
+                <field name="cantidad"/>
+                <field name="estado"/>
+            </tree>
+        </field>
     </record>
-    <record id="jcd_Fruteria.Fruta_form" model="ir.ui.view">
-      <field name="name">jcd_Fruteria.Fruta.form</field>
-      <field name="model">jcd_Fruteria.Fruta</field>
-      <field name="arch" type="xml">
-        <form string="">
-          <sheet>
-            <group>
-              <field name="name"></field>
-              <field name="precio"></field>
-              <!-- En el formulario podemos permitir la selección de la moneda -->
-              <field name="cantidad" />
-              <!-- Los campos relacionales, como categoria_id, se pueden usar como cualquier otro en vistas.
-              Odoo nos mostrará el atributo name del objeto relacionado. -->
-              <field name="estado" />
-              <!-- Alternativa a hacer un tree anidado -->
-              <field name="fruta_ids" widget="many2many_kanban">
-                <kanban>
-                    <field name="name"/>
-                    <templates>
-                        <t t-name="kanban-box">
-                            <field name="name"/>
-                        </t>
-                    </templates>
-                </kanban>
-              </field>
-            </group>
-          </sheet>
-        </form>
-      </field>
+
+    <!-- Vista de formulario para Fruta -->
+    <record id="jcd_fruteria_fruta_form" model="ir.ui.view">
+        <field name="name">jcd_fruteria.fruta.form</field>
+        <field name="model">jcd_fruteria.fruta</field>
+        <field name="arch" type="xml">
+            <form string="Fruta">
+                <sheet>
+                    <group>
+                        <field name="fruta_id"/>
+                        <field name="name"/>
+                        <field name="precio"/>
+                        <field name="cantidad"/>
+                        <field name="estado"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
     </record>
-  </data>
+
+    <!-- Acción para abrir la vista de Fruta -->
+    <record id="action_jcd_fruteria_fruta" model="ir.actions.act_window">
+        <field name="name">Frutas</field>
+        <field name="res_model">jcd_fruteria.fruta</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menú para acceder a la vista de Fruta -->
+    <menuitem id="menu_jcd_fruteria_fruta" name="Frutas" action="action_jcd_fruteria_fruta" sequence="30"/>
 </odoo>

@@ -1,9 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_jcd_Fruteria_Fruta_users,jcd_Fruteria.Fruta_users,model_jcd_Fruteria_Fruta,base.group_user,1,0,0,0
-access_jcd_Fruteria_Cliente_users,jcd_Fruteria.Cliente_users,model_jcd_Fruteria_Cliente,base.group_user,1,0,0,0
-access_jcd_Fruteria_Empleado_users,jcd_Fruteria.Empleado_users,model_jcd_Fruteria_Empleado,base.group_user,1,0,0,0
-access_jcd_Fruteria_Proveedor_users,jcd_Fruteria.Proveedor_users,model_jcd_Fruteria_Proveedor,base.group_user,1,0,0,0
-access_jcd_Fruteria_Fruta_system,jcd_Fruteria.Fruta_system,model_jcd_Fruteria_Fruta,base.group_system,1,1,1,1
-access_jcd_Fruteria_Cliente_system,jcd_Fruteria.Cliente_system,model_jcd_Fruteria_Cliente,base.group_system,1,1,1,1
-access_jcd_Fruteria_Empleado_system,jcd_Fruteria.Empleado_system,model_jcd_Fruteria_Empleado,base.group_system,1,1,1,1
-access_jcd_Fruteria_Proveedor_system,jcd_Fruteria.Proveedor_system,model_jcd_Fruteria_Proveedor,base.group_system,1,1,1,1
+access_jcd_fruteria_fruta_users,jcd_fruteria.fruta_users,model_jcd_fruteria_fruta,base.group_user,1,0,0,0
+access_jcd_fruteria_cliente_users,jcd_fruteria.cliente_users,model_jcd_fruteria_cliente,base.group_user,1,0,0,0
+access_jcd_fruteria_empleado_users,jcd_fruteria.empleado_users,model_jcd_fruteria_empleado,base.group_user,1,0,0,0
+access_jcd_fruteria_proveedor_users,jcd_fruteria.proveedor_users,model_jcd_fruteria_proveedor,base.group_user,1,0,0,0
+access_jcd_fruteria_fruta_system,jcd_fruteria.fruta_system,model_jcd_fruteria_fruta,base.group_system,1,1,1,1
+access_jcd_fruteria_cliente_system,jcd_fruteria.cliente_system,model_jcd_fruteria_cliente,base.group_system,1,1,1,1
+access_jcd_fruteria_empleado_system,jcd_fruteria.empleado_system,model_jcd_fruteria_empleado,base.group_system,1,1,1,1
+access_jcd_fruteria_proveedor_system,jcd_fruteria.proveedor_system,model_jcd_fruteria_proveedor,base.group_system,1,1,1,1

@@ -1,20 +1,11 @@
-# -*- coding: utf-8 -*-
-
-from odoo import models, fields, api
-
+from odoo import models, fields
 class Empleado(models.Model):
-    _name = 'jcd_Fruteria.Empleado'
+    _name = 'jcd_fruteria.empleado'  # Corregido guion bajo
     _description = 'Empleado'
-    
-
-    
-    name = fields.Char('Nombre', required=True, help='Introduzca el nombre del empleado')
-    edad = fields.Integer('Edad', help='Introduzca la edad del empleado')
+    name = fields.Char(string='Nombre', required=True, help='Introduzca el nombre del empleado')
+    edad = fields.Integer(string='Edad', help='Introduzca la edad del empleado')
     genero = fields.Selection([
         ('0', 'Hombre'),
         ('1', 'Mujer')
-    ], string='"Género"')
-    fechaNacimiento = fields.Date('Fecha de nacimiento',required=True, help='Introduce la fecha de nacimientos')
-
-   
-   
+    ], string='Género')
+    fecha_nacimiento = fields.Date(string='Fecha de nacimiento', required=True, help='Introduce la fecha de nacimiento')

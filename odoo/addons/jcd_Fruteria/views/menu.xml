@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Acciones para cada modelo -->
+        <record id="action_jcd_fruteria_cliente" model="ir.actions.act_window">
+            <field name="name">Clientes</field>
+            <field name="res_model">jcd_fruteria.cliente</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <record id="action_jcd_fruteria_fruta" model="ir.actions.act_window">
+            <field name="name">Frutas</field>
+            <field name="res_model">jcd_fruteria.fruta</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <record id="action_jcd_fruteria_empleado" model="ir.actions.act_window">
+            <field name="name">Empleados</field>
+            <field name="res_model">jcd_fruteria.empleado</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <record id="action_jcd_fruteria_proveedor" model="ir.actions.act_window">
+            <field name="name">Proveedores</field>
+            <field name="res_model">jcd_fruteria.proveedor</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <!-- Menú principal -->
+        <menuitem
+            id="jcd_Fruteria.root_menu"
+            name="Fruteria"
+            sequence="10"/>
+            
+        <!-- Submenús -->
+        <menuitem
+            id="jcd_Fruteria.cliente_menu"
+            name="Clientes"
+            action="action_jcd_fruteria_cliente"
+            parent="jcd_Fruteria.root_menu"
+            sequence="10"/>
+            
+        <menuitem
+            id="jcd_Fruteria.fruta_menu"
+            name="Frutas"
+            action="action_jcd_fruteria_fruta"
+            parent="jcd_Fruteria.root_menu"
+            sequence="20"/>
+            
+        <menuitem
+            id="jcd_Fruteria.empleado_menu"
+            name="Empleados"
+            action="action_jcd_fruteria_empleado"
+            parent="jcd_Fruteria.root_menu"
+            sequence="30"/>
+            
+        <menuitem
+            id="jcd_Fruteria.proveedor_menu"
+            name="Proveedores"
+            action="action_jcd_fruteria_proveedor"
+            parent="jcd_Fruteria.root_menu"
+            sequence="40"/>
+    </data>
+</odoo>

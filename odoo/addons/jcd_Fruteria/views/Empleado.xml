@@ -1,49 +1,43 @@
 <odoo>
-  <data>
-    <record id="jcd_Fruteria.Empleado_tree" model="ir.ui.view">
-      <field name="name">jcd_Fruteria.Empleado.tree</field>
-      <field name="model">jcd_Fruteria.Empleado</field>
-      <field name="arch" type="xml">
-        <tree string="Categoría">
-          <field name="name"></field>
-          <field name="edad" />
-          <field name="genero" />
-          <field name="fechaNacimiento" />
-          <!-- usar un campo xxx2many en un listado sólo muestra el número de registros -->
-          <!-- Si se quiere ver una lista de todos los libros, una opción sería hacer un campo calculado
-          que concatenara sus nombres -->
-          <!--<field name="libro_ids" optional="hide"/>-->
-        </tree>
-      </field>
+    <!-- Vista de lista para Empleado -->
+    <record id="jcd_fruteria_empleado_tree" model="ir.ui.view">
+        <field name="name">jcd_fruteria.empleado.tree</field>
+        <field name="model">jcd_fruteria.empleado</field>
+        <field name="arch" type="xml">
+            <tree string="Empleados">
+                <field name="name"/>
+                <field name="edad"/>
+                <field name="genero"/>
+                <field name="fecha_nacimiento"/>
+            </tree>
+        </field>
     </record>
-    <record id="jcd_Fruteria.Empleado_form" model="ir.ui.view">
-      <field name="name">jcd_Fruteria.Empleado.form</field>
-      <field name="model">jcd_Fruteria.Empleado</field>
-      <field name="arch" type="xml">
-        <form string="">
-          <sheet>
-            <group>
-              <field name="name"></field>
-              <field name="edad" />
-              <field name="genero" />
-              <field name="fechaNacimiento" />
-              <!-- Podemos hacer uso de un atributo xxx2many en un formulario, para ver de forma anidada un listado -->
-              <!--<field name="libro_ids">-->
-                <!-- Dentro de la etiqueta field definimos una subvista tree con los campos que queramos ver -->
-                <tree string="Empleados">
-                  <field name="name"></field>
-                  <field name="edad" />
-                  <field name="genero" />
-                  <field name="fechaNacimiento" />
-                </tree>
-                <!-- Alternativamente a usar un tree anidado, también puede dar mucha usabilidad definir el field 
-                con algún tipo de widget específico para campos xxx2many 
-                https://poncesoft.blogspot.com/2015/09/widgets-para-campos-many2many-odoo.html -->
-              </field>
-            </group>
-          </sheet>
-        </form>
-      </field>
+
+    <!-- Vista de formulario para Empleado -->
+    <record id="jcd_fruteria_empleado_form" model="ir.ui.view">
+        <field name="name">jcd_fruteria.empleado.form</field>
+        <field name="model">jcd_fruteria.empleado</field>
+        <field name="arch" type="xml">
+            <form string="Empleado">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="edad"/>
+                        <field name="genero"/>
+                        <field name="fecha_nacimiento"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
     </record>
-  </data>
+
+    <!-- Acción para abrir la vista de Empleado -->
+    <record id="action_jcd_fruteria_empleado" model="ir.actions.act_window">
+        <field name="name">Empleados</field>
+        <field name="res_model">jcd_fruteria.empleado</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menú para acceder a la vista de Empleado -->
+    <menuitem id="menu_jcd_fruteria_empleado" name="Empleados" action="action_jcd_fruteria_empleado" sequence="20"/>
 </odoo>

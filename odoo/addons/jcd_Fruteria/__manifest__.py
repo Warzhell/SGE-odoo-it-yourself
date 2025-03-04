@@ -7,9 +7,7 @@
     'description': """
 Descripción larga<br/>
 Se puede leer yendo a Inicio > Aplicaciones<br/>
-Quitando el filtro Aplicaciones y buscando sge<br/>
-Entrando a Más información sobre sge_libreria este nombre técnico
-viene dado por el nombre del directorio cuando lo creamos con odoo scaffold
+
     """,
 
     'author': "Jorge Cuevas Delgado",

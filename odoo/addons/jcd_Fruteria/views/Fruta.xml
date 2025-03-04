@@ -5,11 +5,11 @@
         <field name="model">jcd_fruteria.fruta</field>
         <field name="arch" type="xml">
             <tree string="Frutas">
-                <field name="fruta_id"/>
                 <field name="name"/>
                 <field name="precio"/>
                 <field name="cantidad"/>
                 <field name="estado"/>
+                <field name="proveedor_id"/> <!-- Campo Many2one para el proveedor -->
             </tree>
         </field>
     </record>
@@ -22,11 +22,12 @@
             <form string="Fruta">
                 <sheet>
                     <group>
-                        <field name="fruta_id"/>
                         <field name="name"/>
                         <field name="precio"/>
                         <field name="cantidad"/>
                         <field name="estado"/>
+                        <field name="proveedor_id"/> 
+                        <field name="imagen" widget="image" class="oe_avatar"/>
                     </group>
                 </sheet>
             </form>
@@ -39,6 +40,4 @@
         <field name="res_model">jcd_fruteria.fruta</field>
         <field name="view_mode">tree,form</field>
     </record>
-
-    
 </odoo>

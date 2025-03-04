@@ -1,20 +1,72 @@
 <odoo>
     <data>
-        <record id="object0" model="jcd_Fruteria.Cliente">
+        <!-- Insertando un Cliente -->
+        <record id="cliente_1" model="jcd_fruteria.cliente">
+            <field name="nombre">Juan Pérez</field>
+            <field name="email">juan.perez@email.com</field>
+            <field name="nacionalidad_id" ref="base.es"/> <!-- Nacionalidad: España (usa una referencia a la nacionalidad que ya exista en Odoo) -->
+        </record>
+
+        <record id="cliente_2" model="jcd_fruteria.cliente">
+            <field name="nombre">María García</field>
+            <field name="email">maria.garcia@email.com</field>
+            <field name="nacionalidad_id" ref="base.fr"/> <!-- Nacionalidad: Francia -->
+        </record>
+
+        <!-- Insertando un Proveedor -->
+        <record id="proveedor_1" model="jcd_fruteria.proveedor">
+            <field name="name">Frutas del Valle</field>
+            <field name="email">info@frutasvalle.com</field>
+        </record>
+
+        <record id="proveedor_2" model="jcd_fruteria.proveedor">
+            <field name="name">Frutas Sol</field>
+            <field name="email">contacto@frutassol.com</field>
+        </record>
+
+        <!-- Insertando un Empleado -->
+        <record id="empleado_1" model="jcd_fruteria.empleado">
+            <field name="name">Carlos Sánchez</field>
+            <field name="edad">30</field>
+            <field name="genero">hombre</field>
+            <field name="fecha_nacimiento">1992-05-15</field>
+            <field name="proveedor_ids" eval="[(6, 0, [ref('proveedor_1')])]"/> <!-- Relacionando con 'Frutas del Valle' -->
+        </record>
+
+        <record id="empleado_2" model="jcd_fruteria.empleado">
+            <field name="name">Lucía Martínez</field>
+            <field name="edad">28</field>
+            <field name="genero">mujer</field>
+            <field name="fecha_nacimiento">1994-08-23</field>
+            <field name="proveedor_ids" eval="[(6, 0, [ref('proveedor_2')])]"/> <!-- Relacionando con 'Frutas Sol' -->
+        </record>
+
+        <!-- Insertando una Fruta -->
+        <record id="fruta_1" model="jcd_fruteria.fruta">
+            <field name="fruta_id">F001</field>
             <field name="name">Manzana</field>
-            <field name="value">0</field>
+            <field name="precio">2.5</field>
+            <field name="cantidad">100</field>
+            <field name="estado">1</field> <!-- 'Bueno' -->
+            <field name="proveedor_id" ref="proveedor_1"/> <!-- Relacionando con 'Frutas del Valle' -->
         </record>
-        <record id="object1" model="jcd_Fruteria.Empleado">
+
+        <record id="fruta_2" model="jcd_fruteria.fruta">
+            <field name="fruta_id">F002</field>
             <field name="name">Pera</field>
-            <field name="value">10</field>
+            <field name="precio">3.0</field>
+            <field name="cantidad">200</field>
+            <field name="estado">2</field> <!-- 'Regular' -->
+            <field name="proveedor_id" ref="proveedor_2"/> <!-- Relacionando con 'Frutas Sol' -->
         </record>
-        <record id="object2" model="jcd_Fruteria.Fruta">
-            <field name="name">Fresa</field>
-            <field name="value">20</field>
-        </record>
-        <record id="object3" model="jcd_Fruteria.Proveedor">
-            <field name="name">Platano</field>
-            <field name="value">30</field>
+
+        <record id="fruta_3" model="jcd_fruteria.fruta">
+            <field name="fruta_id">F003</field>
+            <field name="name">Plátano</field>
+            <field name="precio">1.2</field>
+            <field name="cantidad">150</field>
+            <field name="estado">1</field> <!-- 'Bueno' -->
+            <field name="proveedor_id" ref="proveedor_1"/> <!-- Relacionando con 'Frutas del Valle' -->
         </record>
     </data>
 </odoo>

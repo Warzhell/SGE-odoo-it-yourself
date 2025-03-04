@@ -14,6 +14,6 @@ class Fruta(models.Model):
         ('3', 'Malo')
     ], string='Estado', default='1')
 
-    # Campo Many2one que hace la relación con Proveedor
+    
     proveedor_id = fields.Many2one('jcd_fruteria.proveedor', string='Proveedor', help='Proveedor asociado')
     imagen = fields.Image(string='Imagen de la Fruta')

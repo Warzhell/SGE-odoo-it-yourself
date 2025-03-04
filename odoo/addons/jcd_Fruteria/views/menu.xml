@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <!-- Acciones para cada modelo -->
+      ->
         <record id="action_jcd_fruteria_cliente" model="ir.actions.act_window">
             <field name="name">Clientes</field>
             <field name="res_model">jcd_fruteria.cliente</field>
@@ -26,13 +26,13 @@
             <field name="view_mode">tree,form</field>
         </record>
         
-        <!-- Menú principal -->
+       
         <menuitem
             id="jcd_Fruteria.root_menu"
             name="Fruteria"
             sequence="10"/>
             
-        <!-- Submenús -->
+        
         <menuitem
             id="jcd_Fruteria.cliente_menu"
             name="Clientes"

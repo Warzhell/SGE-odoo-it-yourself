@@ -1,5 +1,5 @@
 <odoo>
-    <!-- Vista de lista para Proveedor -->
+
     <record id="jcd_fruteria_proveedor_tree" model="ir.ui.view">
         <field name="name">jcd_fruteria.proveedor.tree</field>
         <field name="model">jcd_fruteria.proveedor</field>
@@ -7,12 +7,12 @@
             <tree string="Proveedores">
                 <field name="name"/>
                 <field name="email"/>
-                <!-- No se puede mostrar un campo One2many en la vista tree directamente, pero puedes crear una acción en la vista de detalle -->
+                
             </tree>
         </field>
     </record>
 
-    <!-- Vista de formulario para Proveedor -->
+
     <record id="jcd_fruteria_proveedor_form" model="ir.ui.view">
         <field name="name">jcd_fruteria.proveedor.form</field>
         <field name="model">jcd_fruteria.proveedor</field>
@@ -22,7 +22,7 @@
                     <group>
                         <field name="name"/>
                         <field name="email"/>
-                        <!-- Mostrar el campo One2many 'fruta_ids' como una lista dentro del formulario -->
+
                         <field name="fruta_ids">
                             <tree>
                                 <field name="name"/>
@@ -37,7 +37,7 @@
         </field>
     </record>
 
-    <!-- Acción para abrir la vista de Proveedor -->
+
     <record id="action_jcd_fruteria_proveedor" model="ir.actions.act_window">
         <field name="name">Proveedores</field>
         <field name="res_model">jcd_fruteria.proveedor</field>

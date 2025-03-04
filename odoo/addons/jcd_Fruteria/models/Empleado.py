@@ -7,7 +7,7 @@ class Empleado(models.Model):
     name = fields.Char(string='Nombre', required=True, help='Introduzca el nombre del empleado')
     edad = fields.Integer(string='Edad', help='Introduzca la edad del empleado')
     
-    # Usamos valores más descriptivos para el género
+ 
     genero = fields.Selection([
         ('hombre', 'Hombre'),
         ('mujer', 'Mujer')
@@ -15,11 +15,11 @@ class Empleado(models.Model):
     
     fecha_nacimiento = fields.Date(string='Fecha de nacimiento', required=True, help='Introduce la fecha de nacimiento')
     
-    # Relación Many2many con el modelo Proveedor
+  
     proveedor_ids = fields.Many2many(
-        'jcd_fruteria.proveedor',  # Modelo con el que se establece la relación
-        'proveedor_empleado_rel',   # Tabla intermedia (si no existe, Odoo la crea automáticamente)
-        'empleado_id',             # Campo que referencia al Empleado en la tabla intermedia
-        'proveedor_id',            # Campo que referencia al Proveedor en la tabla intermedia
-        string='Proveedores'       # Nombre que aparecerá en la interfaz
+        'jcd_fruteria.proveedor', 
+        'proveedor_empleado_rel',   
+        'empleado_id',             
+        'proveedor_id',            
+        string='Proveedores'      
     )

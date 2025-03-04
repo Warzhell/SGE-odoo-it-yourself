@@ -1,5 +1,5 @@
 <odoo>
-    <!-- Vista de lista para Fruta -->
+    
     <record id="jcd_fruteria_fruta_tree" model="ir.ui.view">
         <field name="name">jcd_fruteria.fruta.tree</field>
         <field name="model">jcd_fruteria.fruta</field>
@@ -9,12 +9,12 @@
                 <field name="precio"/>
                 <field name="cantidad"/>
                 <field name="estado"/>
-                <field name="proveedor_id"/> <!-- Campo Many2one para el proveedor -->
+                <field name="proveedor_id"/> 
             </tree>
         </field>
     </record>
 
-    <!-- Vista de formulario para Fruta -->
+   
     <record id="jcd_fruteria_fruta_form" model="ir.ui.view">
         <field name="name">jcd_fruteria.fruta.form</field>
         <field name="model">jcd_fruteria.fruta</field>
@@ -34,7 +34,7 @@
         </field>
     </record>
 
-    <!-- Acción para abrir la vista de Fruta -->
+   
     <record id="action_jcd_fruteria_fruta" model="ir.actions.act_window">
         <field name="name">Frutas</field>
         <field name="res_model">jcd_fruteria.fruta</field>

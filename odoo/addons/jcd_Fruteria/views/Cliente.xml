@@ -1,5 +1,5 @@
 <odoo>
-    <!-- Vista de lista para Cliente -->
+   
     <record id="jcd_fruteria_cliente_tree" model="ir.ui.view">
         <field name="name">jcd_fruteria.cliente.tree</field>
         <field name="model">jcd_fruteria.cliente</field>
@@ -12,7 +12,7 @@
         </field>
     </record>
 
-    <!-- Vista de formulario para Cliente -->
+   
     <record id="jcd_fruteria_cliente_form" model="ir.ui.view">
         <field name="name">jcd_fruteria.cliente.form</field>
         <field name="model">jcd_fruteria.cliente</field>
@@ -29,7 +29,7 @@
         </field>
     </record>
 
-    <!-- Acción para abrir la vista de Cliente -->
+
     <record id="action_jcd_fruteria_cliente" model="ir.actions.act_window">
         <field name="name">Clientes</field>
         <field name="res_model">jcd_fruteria.cliente</field>
